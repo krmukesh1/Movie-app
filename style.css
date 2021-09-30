@@ -43,6 +43,7 @@ header .search::placeholder {
   display: inline-block;
   object-fit: cover;
   width: 100%;
+  opacity: 1;
 }
 .movie-info {
   color: #fff;
@@ -81,8 +82,12 @@ header .search::placeholder {
   right: 0;
   transform: translateY(100%);
   transition: transform 0.3s ease-in;
+  opacity: -999;
+  display: none;
 }
 .movie:hover .overview {
   transform: translateY(0%);
   bottom: 0;
+  opacity: 999;
+  display: block;
 }
