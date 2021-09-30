@@ -1,0 +1,32 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.movie {
+  background: #373b69;
+  border-radius: 3px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 2rem;
+}
+.movie img {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+}
+.movie-info {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.movie-info h3 {
+  margin: 0;
+}
+.movie-info span {
+  background: #2225b4;
+  border-radius: 3px;
+  padding: 0.25rem 0.25rem;
+}

@@ -7,11 +7,22 @@ const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 async function getMovies() {
   const resp = await fetch(APIURL);
   const respData = await resp.json();
+  const main = document.querySelector("main");
 
   respData.results.forEach((movie) => {
-    const img = document.createElement("img");
-    img.src = IMGPATH + movie.poster_path;
-    document.body.appendChild(img);
+    const { poster_path, title, vote_average } = movie;
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+    movieEl.innerHTML = `
+ 
+    <img src="${IMGPATH + poster_path}" alt="${title}"/>
+    <div class="movie-info">
+      <h3>${title}</h3>
+      <span>${vote_average}</span>
+    </div>
+ 
+    `;
+    main.appendChild(movieEl);
   });
   console.log(respData);
   return respData;
