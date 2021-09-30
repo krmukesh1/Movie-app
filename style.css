@@ -1,8 +1,35 @@
+h1 {
+  text-align: center;
+}
 main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+body {
+  background: #373b69;
+}
+header {
+  background: #373b69;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+header .search {
+  background: transparent;
+  background: 2px solid #22254b;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  color: #fff;
+}
+header .search::placeholder {
+  color: #7378c5;
+}
+.search:focus {
+  background: #22254b;
+  outline: none;
 }
 .movie {
   background: #373b69;
@@ -21,12 +48,25 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  cursor: pointer;
 }
 .movie-info h3 {
   margin: 0;
+  font-size: 13px;
 }
 .movie-info span {
   background: #2225b4;
   border-radius: 3px;
-  padding: 0.25rem 0.25rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+}
+.movie-info span.green {
+  color: green;
+  background: #fff;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: red;
 }
